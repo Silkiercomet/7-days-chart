@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+--Softred: hsl(10, 79%, 65%); /*header bg | chart color*/
+--Cyan: hsl(186, 34%, 60%); /*on hover chart color*/
+--Darkbrown: hsl(25, 47%, 15%); /* font color */
+--Mediumbrown: hsl(28, 10%, 53%); /* seconsary font color */
+--Cream: hsl(27, 66%, 92%); /*main bg*/
+--Verypaleorange: hsl(33, 100%, 98%); /* seconsary font color */
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+body{
+    min-height: 100vh;
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--Cream);
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+main{
+    display: grid;
+    max-width: 450px;
+    width: 100%;
+    gap:1rem
+}
+
+.header{
+    background-color: var(--Softred);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 21px 30px;
+    border-radius: 18px;
+}
+.header h1 strong{
+    font-size: 16px;
+    font-weight: 400;
+}
+.header h1 {
+    color: var(--Verypaleorange);
+    line-height: 2rem;
+}
+
+/* ------------ continer ------------*/
+
+.container{
+    background-color: var(--Verypaleorange);
+    padding: 25px 30px;
+    border-radius: 18px;
+}
+.container h2{
+    font-size: 2rem;
+    color: var(--Darkbrown);
+}
+.chart{
+    display: grid;
+    place-items: center;
+    min-height: 200px;
+}
+.chart-days{
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    gap: 15px;
+}
+
+.chart-bar {
+    position: relative;
+
+    width: 100%;  /* 100% / 7 days (with some adjustment for spacing) */
+    height: 0;     /* Initial height will be set by JS */
+    background-color: var(--Softred);
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+}
+.chart-bar:hover {
+    background-color: var(--Cyan);
+
+}
+.chart__bar{
+    text-align: center;
+    width: 100%;
+    color: var(--Mediumbrown);
+
+
+}
+.chart-bar:hover .amount {
+    opacity: 1;
+
+}
+.amount{
+    position: absolute;
+    top: -28px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    border-radius: 3px;
+    font-size: .8rem;
+    pointer-events: none;
+    background-color: var(--Darkbrown);
+    color: var(--Verypaleorange);
+
+    transition: 300ms ease-in-out;
+}
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+footer h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--Darkbrown);
+}
+footer h3 strong{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Mediumbrown);
+}
+
+footer span{
+    font-weight: 700;
+    margin-left: auto;
+    text-align: right;
+    color: var(--Darkbrown);
+}
+footer span strong{
+    font-weight: 400;
+    color: var(--Mediumbrown);
+}

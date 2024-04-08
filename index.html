@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <h1>
+          <strong>My balance</strong><br />
+          $921.48
+        </h1>
+        <img src="images/logo.svg" alt="logo for the enterprise" />
+      </header>
+
+      <section class="container">
+        <h2>Spending - Last 7 days</h2>
+        <div class="chart">
+          <ul class="chart-days">
+            <li class="chart__bar">Mon</li>
+            <li class="chart__bar">Tue</li>
+            <li class="chart__bar">Wed</li>
+            <li class="chart__bar">Thu</li>
+            <li class="chart__bar">Fri</li>
+            <li class="chart__bar">Sat</li>
+            <li class="chart__bar">Sun</li>
+          </ul>
+        </div>
+        <footer>
+          <h3>
+          <strong>Total this month</strong><br />
+            $478.33
+          </h3>
+          <span>
+            +2.4%<br />
+            <strong>from last month</strong>
+          </span>
+        </footer>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Luis Colina</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
